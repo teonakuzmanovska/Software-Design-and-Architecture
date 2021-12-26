@@ -22,6 +22,7 @@ public class Universities {
     Integer lon;
 
     public Universities() {
+
     }
 
     public Universities(Long id, String name, String city, String street, String opening_hours, String phone, Integer lat, Integer lon) {

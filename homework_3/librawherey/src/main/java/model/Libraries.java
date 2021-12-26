@@ -41,9 +41,7 @@ public class Libraries {
         return name;
     }
 
-    public String getCity() {
-        return city;
-    }
+    public String getCity() { return city; }
 
     public String getStreet() {
         return street;

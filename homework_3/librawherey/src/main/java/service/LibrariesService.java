@@ -10,4 +10,5 @@ public interface LibrariesService {
     List<Libraries> findAll();
     Optional<Libraries> findById(Long id);
     Optional<Libraries> save(String name, String opening_hours, double lat, double lon);
+    List<Libraries> passNearbyLibraries();
 }

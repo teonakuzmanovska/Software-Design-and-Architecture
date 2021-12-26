@@ -59,4 +59,10 @@ public class LibrariesServiceImplementation implements LibrariesService{
     }
 
     // within5km listata display-nija na front end (preku @PostMapping)
+
+    @Override
+    public List<Libraries> passNearbyLibraries(){
+        return within5km;
+    }
+
 }

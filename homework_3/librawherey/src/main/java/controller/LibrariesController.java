@@ -3,6 +3,7 @@ package controller;
 
 import model.Libraries;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import service.LibrariesService;
 
@@ -37,6 +38,9 @@ public class LibrariesController {
                 .map(libraries -> ResponseEntity.ok().body(libraries))
                 .orElseGet(() -> ResponseEntity.badRequest().build());
     }
+
+    // tuka prenesi within5killometers
+
 
 
 }
