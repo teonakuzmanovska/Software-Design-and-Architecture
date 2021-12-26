@@ -33,10 +33,12 @@ public class LibrariesServiceImplementation implements LibrariesService{
     }
 
 
+    // objekt so koj gi pristapuvame bibliotekite
     Collection<Libraries> libraries;
     // TO-DO: staj if uslov zavisno od izbrano shkolo/univerzitet
     Schools selectedLocation;
 
+    // vo ovaa lista gi chuvame isfiltriranite biblioteki
     List<Libraries> within5km = libraries.stream()
             .filter(l -> haversine(l.getLat(), l.getLon(), selectedLocation.getLat(), selectedLocation.getLon()) <= 5)
             .collect(Collectors.toList());

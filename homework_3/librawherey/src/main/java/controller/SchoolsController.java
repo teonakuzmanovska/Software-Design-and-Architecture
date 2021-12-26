@@ -2,6 +2,7 @@ package controller;
 
 import model.Schools;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import service.SchoolsService;
 
@@ -30,10 +31,12 @@ public class SchoolsController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-//     Find schools by given name
-//    @PostMapping("/searchSchools")
-//    public List<Schools> findAllByName(@RequestParam String search){
-//        return this.schoolsService.findSchoolsByName(search);
-//    }
+    @GetMapping
+    String getSchools(Model model){
+        List<Schools> schools = schoolsService.findAll();
+        model.addAttribute("schools", schools);
+
+        return "home";
+    }
 
 }

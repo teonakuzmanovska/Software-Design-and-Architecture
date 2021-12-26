@@ -1,12 +1,12 @@
 package controller;
 
-
 import model.Libraries;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import service.LibrariesService;
 
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -39,8 +39,12 @@ public class LibrariesController {
                 .orElseGet(() -> ResponseEntity.badRequest().build());
     }
 
-    // tuka prenesi within5killometers
+    @GetMapping
+//    public List<Libraries> passNearbyLibraries() { return this.librariesService.passNearbyLibraries(); }
+    String getLibraries(Model model){
+        List<Libraries> libraries = librariesService.passNearbyLibraries();
+        model.addAttribute("libraries", libraries);
 
-
-
+        return "home";
+    }
 }
