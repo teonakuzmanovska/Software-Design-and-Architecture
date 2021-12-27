@@ -102,10 +102,10 @@
     <div class="container">
         <div id='map' class="position-absolute top-50 start-50 translate-middle"
              style="width: 1000px; height: 250px"></div>
-        <script>
-
+        <script th:inline="javascript">
 
             mapboxgl.accessToken = 'pk.eyJ1IjoiYW1taXRyZXZza2EiLCJhIjoiY2t4bms0djlqNW51dDJ3bzU4N3Y3MHNnMyJ9.3JN-PxishDOcsPGrfSx5JA';
+
             var map = new mapboxgl.Map({
                 container: 'map',
                 style: 'mapbox://styles/mapbox/streets-v11',
@@ -114,6 +114,43 @@
 
             const nav = new mapboxgl.NavigationControl();
             map.addControl(nav, 'top-right');
+
+
+            var libraries = []
+
+            /*<![CDATA[*/
+
+            /*[# th:each="library : ${libraries}"]*/
+            libraries.push({
+                "type": "Feature",
+                "geometry":
+                    {
+                        "type" : "Point",
+                        "coordinates" :
+                            [
+                                /*[[${library.getLat()}]]*/,
+                                /*[[${library.getLon()}]]*/
+                            ]
+                    },
+                "properties" :
+                    {
+                        "name" : "/*[[${library.getName()}]]*/",
+                        "phone" : "/*[[${library.getPhone()}]]*/",
+                        "street" : "/*[[${library.getStreet()}]]*/",
+                        "opening_hours" : "/*[[${library.getOpening_hours()}]]*/",
+
+                    }
+            })
+            /*[/]*/
+
+            const nearbyLibraries =
+            {
+                "type": "FeatureCollection",
+                "features":
+                    libraries
+            }
+
+
 
         </script>
 

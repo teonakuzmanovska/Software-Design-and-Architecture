@@ -22,20 +22,12 @@ public class LibrariesServiceImplementation implements LibrariesService{
     @Override
     public List<Libraries> findAll() { return this.librariesRepository.findAll(); }
 
-    @Override
-    public Optional<Libraries> findById(Long id) {
-        return this.librariesRepository.findById(id);
-    }
 
-    @Override
-    public Optional<Libraries> save(String name, String opening_hours, double lat, double lon) {
-        return Optional.empty();
-    }
-
-
-    // objekt so koj gi pristapuvame bibliotekite
     Collection<Libraries> libraries;
-    // TO-DO: staj if uslov zavisno od izbrano shkolo/univerzitet
+
+
+
+    // TO-DO: ovde gi prenesuvame podatocite izvlecheni od frontend preku kontrolerot
     Schools selectedLocation;
 
     // vo ovaa lista gi chuvame isfiltriranite biblioteki
@@ -59,8 +51,6 @@ public class LibrariesServiceImplementation implements LibrariesService{
 
         return distance;
     }
-
-    // within5km listata display-nija na front end (preku @PostMapping)
 
     @Override
     public List<Libraries> passNearbyLibraries(){

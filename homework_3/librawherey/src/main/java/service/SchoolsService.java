@@ -9,5 +9,4 @@ public interface SchoolsService {
 
     List<Schools> findAll();
 
-    Optional<Schools> findById(Long id);
 }

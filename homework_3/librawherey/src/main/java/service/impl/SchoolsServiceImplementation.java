@@ -22,10 +22,10 @@ public class SchoolsServiceImplementation implements SchoolsService {
         return this.schoolsRepository.findAll();
     }
 
-    @Override
-    public Optional<Schools> findById(Long id) {
-        return this.schoolsRepository.findById(id);
-    }
+//    @Override
+//    public Optional<Schools> findById(Long id) {
+//        return this.schoolsRepository.findById(id);
+//    }
 
 
 }
