@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface LibrariesRepository extends JpaRepository<Libraries, String> {
+public interface LibrariesRepository extends JpaRepository<Libraries, Long> {
 
 }

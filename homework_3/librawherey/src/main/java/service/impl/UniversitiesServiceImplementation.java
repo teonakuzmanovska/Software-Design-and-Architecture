@@ -22,7 +22,7 @@ public class UniversitiesServiceImplementation implements UniversitiesService {
 
     @Override
     public Optional<Universities> findById(Long id) {
-        return this.universitiesRepository.findById(String.valueOf(id));
+        return this.universitiesRepository.findById(id);
     }
 
 }

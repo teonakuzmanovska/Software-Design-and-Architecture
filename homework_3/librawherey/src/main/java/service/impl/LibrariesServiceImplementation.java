@@ -24,7 +24,7 @@ public class LibrariesServiceImplementation implements LibrariesService{
 
     @Override
     public Optional<Libraries> findById(Long id) {
-        return this.librariesRepository.findById(String.valueOf(id));
+        return this.librariesRepository.findById(id);
     }
 
     @Override

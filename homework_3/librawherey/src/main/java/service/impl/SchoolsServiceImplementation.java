@@ -24,7 +24,7 @@ public class SchoolsServiceImplementation implements SchoolsService {
 
     @Override
     public Optional<Schools> findById(Long id) {
-        return this.schoolsRepository.findById(String.valueOf(id));
+        return this.schoolsRepository.findById(id);
     }
 
 
