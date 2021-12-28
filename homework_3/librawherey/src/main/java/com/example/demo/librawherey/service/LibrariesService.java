@@ -1,6 +1,6 @@
-package service;
+package com.example.demo.librawherey.service;
 
-import model.Libraries;
+import com.example.demo.librawherey.model.Libraries;
 
 import java.util.List;
 

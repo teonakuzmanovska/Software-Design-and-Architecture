@@ -1,9 +1,9 @@
-package service.impl;
+package com.example.demo.librawherey.service.impl;
 
-import repository.LibrariesRepository;
-import service.LibrariesService;
-import model.Libraries;
-import model.Schools;
+import com.example.demo.librawherey.repository.LibrariesRepository;
+import com.example.demo.librawherey.service.LibrariesService;
+import com.example.demo.librawherey.model.Libraries;
+import com.example.demo.librawherey.model.Schools;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
@@ -19,6 +19,19 @@ public class LibrariesServiceImplementation implements LibrariesService {
     }
 
     @Override
+    public List<Libraries> passNearbyLibraries(){
+
+        // vo ovaa lista gi chuvame isfiltriranite biblioteki
+        List<Libraries> within5km = libraries.stream()
+                .filter(l -> haversine(l.getLat(), l.getLon(), selectedLocation.getLat(), selectedLocation.getLon()) <= 5)
+                .collect(Collectors.toList());
+
+
+        return within5km;
+    }
+
+
+    @Override
     public List<Libraries> findAll() { return this.librariesRepository.findAll(); }
 
 
@@ -28,11 +41,6 @@ public class LibrariesServiceImplementation implements LibrariesService {
 
     // TO-DO: ovde gi prenesuvame podatocite izvlecheni od frontend preku kontrolerot
     Schools selectedLocation;
-
-    // vo ovaa lista gi chuvame isfiltriranite biblioteki
-    List<Libraries> within5km = libraries.stream()
-            .filter(l -> haversine(l.getLat(), l.getLon(), selectedLocation.getLat(), selectedLocation.getLon()) <= 5)
-            .collect(Collectors.toList());
 
     public static double haversine(double latLibrary, double lonLibrary, double latLocation, double lonLocation) {
 
@@ -49,11 +57,6 @@ public class LibrariesServiceImplementation implements LibrariesService {
         double distance = radius * c;
 
         return distance;
-    }
-
-    @Override
-    public List<Libraries> passNearbyLibraries(){
-        return within5km;
     }
 
 }

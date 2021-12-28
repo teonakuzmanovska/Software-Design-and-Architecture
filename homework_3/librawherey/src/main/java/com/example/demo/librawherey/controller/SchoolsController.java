@@ -1,16 +1,15 @@
-package controller;
+package com.example.demo.librawherey.controller;
 
-import model.Schools;
+import com.example.demo.librawherey.model.Schools;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-import service.SchoolsService;
+import com.example.demo.librawherey.service.SchoolsService;
 
 import java.util.List;
 
 @Controller
-@RequestMapping("/home") // ovde vaka treba?
+@RequestMapping("/")
 
 public class SchoolsController {
 

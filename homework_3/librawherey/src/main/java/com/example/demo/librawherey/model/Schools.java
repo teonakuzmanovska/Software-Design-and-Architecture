@@ -1,4 +1,4 @@
-package model;
+package com.example.demo.librawherey.model;
 import lombok.Data;
 import javax.persistence.*;
 

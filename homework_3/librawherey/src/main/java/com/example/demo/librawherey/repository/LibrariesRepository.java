@@ -1,6 +1,6 @@
-package repository;
+package com.example.demo.librawherey.repository;
 
-import model.Libraries;
+import com.example.demo.librawherey.model.Libraries;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

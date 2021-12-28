@@ -1,9 +1,9 @@
-package service.impl;
+package com.example.demo.librawherey.service.impl;
 
-import model.Schools;
+import com.example.demo.librawherey.model.Schools;
 import org.springframework.stereotype.Service;
-import repository.SchoolsRepository;
-import service.SchoolsService;
+import com.example.demo.librawherey.repository.SchoolsRepository;
+import com.example.demo.librawherey.service.SchoolsService;
 
 import java.util.List;
 
