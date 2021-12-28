@@ -1,18 +1,17 @@
 package service.impl;
 
+import repository.LibrariesRepository;
+import service.LibrariesService;
 import model.Libraries;
 import model.Schools;
 import org.springframework.stereotype.Service;
-import repository.jpa.LibrariesRepository;
-import service.LibrariesService;
 
 import java.util.Collection;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-public class LibrariesServiceImplementation implements LibrariesService{
+public class LibrariesServiceImplementation implements LibrariesService {
     private final LibrariesRepository librariesRepository;
 
     public LibrariesServiceImplementation(LibrariesRepository librariesRepository) {

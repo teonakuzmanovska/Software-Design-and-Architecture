@@ -1,10 +1,10 @@
-package repository.jpa;
+package repository;
 
-import model.Libraries;
+import model.Schools;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface LibrariesRepository extends JpaRepository<Libraries, Long> {
+public interface SchoolsRepository extends JpaRepository<Schools, Long>{
 
 }

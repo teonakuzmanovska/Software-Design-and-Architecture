@@ -2,11 +2,10 @@ package service.impl;
 
 import model.Schools;
 import org.springframework.stereotype.Service;
-import repository.jpa.SchoolsRepository;
+import repository.SchoolsRepository;
 import service.SchoolsService;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class SchoolsServiceImplementation implements SchoolsService {
