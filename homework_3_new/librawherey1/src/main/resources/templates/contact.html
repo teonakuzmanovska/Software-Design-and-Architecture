@@ -23,7 +23,7 @@
 <section id="nav-bar">
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="home.html"><img src="../static/images/logo.png"></a>
+            <a class="navbar-brand"><img th:src="@{/images/logo.png}"></a>
             <button class="navbar-toggler btn-outline-light" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navmenu">
                 <span class="navbar-toggler-icon"></span>
@@ -45,10 +45,10 @@
                     </li>
                 </ul>
             </div>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-light" type="submit">Search</button>
-            </form>
+<!--            <form class="d-flex">-->
+<!--                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
+<!--                <button class="btn btn-light" type="submit">Search</button>-->
+<!--            </form>-->
         </div>
     </nav>
 </section>
@@ -81,7 +81,7 @@
         <div class="row">
             <div class="col-md-4 footer-box text-center">
                 <p><b>ABOUT US</b></p>
-                <p>This web application is meant to find the nearest libraries to a specific school or university.
+                <p>This web application is meant to find the nearest libraries to a specific school.
                     We remembered our need to know where we could get needed literature or to simply know a nearby quiet
                     library where we could
                     study more effectively, for that purpose, we decided to make it easier for the other students.</p>

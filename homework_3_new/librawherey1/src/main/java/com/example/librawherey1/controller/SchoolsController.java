@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -38,8 +39,8 @@ public class SchoolsController {
     ModelAndView index() {
 
         ModelAndView mav = new ModelAndView("home");
-        List<Schools> schools = schoolsService.findAll();
-
+//        List<Schools> schools = schoolsService.findAll();
+    ArrayList<Schools> schools = schoolsService.findAll();
 
 //        mav.addObject("something", "0.1");
 //        <h1 th:text="${something}"/>

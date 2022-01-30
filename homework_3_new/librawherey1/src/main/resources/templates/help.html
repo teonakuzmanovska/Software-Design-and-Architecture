@@ -25,7 +25,7 @@
 <section id="nav-bar">
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="home.html"><img src="../static/images/logo.png"></a>
+            <a class="navbar-brand"><img th:src="@{/images/logo.png}"></a>
             <button class="navbar-toggler btn-outline-light" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navmenu">
                 <span class="navbar-toggler-icon"></span>
@@ -48,9 +48,9 @@
                 </ul>
             </div>
             <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-light" type="submit">Search</button>
-            </form>
+<!--                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
+<!--                <button class="btn btn-light" type="submit">Search</button>-->
+<!--            </form>-->
         </div>
     </nav>
 </section>
@@ -58,11 +58,10 @@
 <section>
     <div class="container align-center pt-5">
         <p>
-            This web application is meant to help you find the libraries that are in 5km radius of the school or the university that you are at in the moment.<br>
-            1. Choose from the radio buttons, if you are currently in a school or university.<br>
-            2. Based on your selection you will be given list of schools or universities in the dropdown list, choose one of them.<br>
-            3. On the map it will be displayed all the locations of the libraries that are in 5km radius.<br>
-            4. Click on the library too see the address and the working hours.<br>
+            This web application is meant to help you find the libraries that are in 5km radius from your school.<br>
+            1. Choose your school from the dropdown list<br>
+            2. On the map it will be displayed all the locations of the libraries that are in 5km radius.<br>
+            3. Click on the library to see the address and the working hours.<br>
         </p>
         </p>
     </div>
@@ -73,7 +72,7 @@
         <div class="row">
             <div class="col-md-4 footer-box text-center">
                 <p><b>ABOUT US</b></p>
-                <p>This web application is meant to find the nearest libraries to a specific school or university.
+                <p>This web application is meant to find the nearest libraries to a specific school.
                     We remembered our need to know where we could get needed literature or to simply know a nearby quiet
                     library where we could
                     study more effectively, for that purpose, we decided to make it easier for the other students.</p>

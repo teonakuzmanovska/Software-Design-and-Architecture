@@ -6,7 +6,7 @@ import com.example.librawherey1.repository.SchoolsRepository;
 import com.example.librawherey1.service.SchoolsService;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.ArrayList;
 
 @Service
 public class SchoolsServiceImpl implements SchoolsService {
@@ -18,8 +18,12 @@ public class SchoolsServiceImpl implements SchoolsService {
     }
 
     @Override
-    public List<Schools> findAll() {
-        return this.schoolsRepository.findAll();
+    public ArrayList<Schools> findAll() {
+        return (ArrayList<Schools>) this.schoolsRepository.findAll();
     }
+
+//    public ArrayList<Schools> findByName(String name) {
+//        return this.schoolsRepository.findByName(name);
+//    }
 
 }

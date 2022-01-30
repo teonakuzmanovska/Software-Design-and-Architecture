@@ -10,7 +10,6 @@ import javax.persistence.*;
 
 public class Schools {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     String name;
     String city;
@@ -34,35 +33,4 @@ public class Schools {
         this.lon = lon;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public String getStreet() {
-        return street;
-    }
-
-    public String getOpening_hours() {
-        return opening_hours;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public Integer getLat() {
-        return lat;
-    }
-
-    public Integer getLon() {
-        return lon;
-    }
 }
