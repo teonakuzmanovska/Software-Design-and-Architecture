@@ -14,7 +14,8 @@
 ////
 ////         model.addAttribute("something","this is coming from the controller");
 ////         return "home";
-//
+
+
 //    @RequestMapping(method = RequestMethod.GET)
 //    @ResponseBody
 //    ModelAndView index() {
@@ -22,5 +23,18 @@
 //        mav.addObject("something", "0.1");
 //        return mav;
 //    }
+
+// schools controller
+// @RequestMapping
+////    @GetMapping
+//    String getHome(Model model)
+//    {
+//        List<Schools> schools = schoolsService.findAll();
+//        model.addAttribute("schools", schools);
+//
+//        return "home";
+//    }
+
+
 ////}
 //}

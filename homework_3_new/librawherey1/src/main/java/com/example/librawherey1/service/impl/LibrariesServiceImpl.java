@@ -6,13 +6,10 @@ import com.example.librawherey1.repository.LibrariesRepository;
 import com.example.librawherey1.service.LibrariesService;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
-import java.util.List;
+import java.util.ArrayList;
 import java.util.stream.Collectors;
 
-
 @Service
-
 public class LibrariesServiceImpl implements LibrariesService {
 
     private final LibrariesRepository librariesRepository;
@@ -22,24 +19,19 @@ public class LibrariesServiceImpl implements LibrariesService {
     }
 
     @Override
-    public List<Libraries> passNearbyLibraries(){
-
-        // vo ovaa lista gi chuvame isfiltriranite biblioteki
-        List<Libraries> within5km = libraries.stream()
-                .filter(l -> haversine(l.getLat(), l.getLon(), selectedLocation.getLat(), selectedLocation.getLon()) <= 5)
-                .collect(Collectors.toList());
-
-        return within5km;
+    public ArrayList<Libraries> findAll() {
+        return (ArrayList<Libraries>) this.librariesRepository.findAll();
     }
 
-    Collection<Libraries> libraries;
+    public ArrayList<Libraries> passNearbyLibraries(ArrayList<Libraries> libraries, Double latSchool, Double lonSchool)
+    {
+        return (ArrayList<Libraries>) libraries.stream()
+                .filter(l -> haversine(l.getLat(), l.getLon(), latSchool, lonSchool) <= 5)
+                .collect(Collectors.toList());
+    }
 
-
-    // TO-DO: vo selectedLocation promenlivata gi prenesuvame podatocite izvlecheni od frontend preku kontrolerot
-    Schools selectedLocation;
-
-    public static double haversine(double latLibrary, double lonLibrary, double latLocation, double lonLocation) {
-
+    public static double haversine(double latLibrary, double lonLibrary, double latLocation, double lonLocation)
+    {
         int radius = 6371; // average radius of the earth in km
 
         double distanceLat = Math.toRadians(latLocation - latLibrary);

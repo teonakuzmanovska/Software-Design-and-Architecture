@@ -22,8 +22,4 @@ public class SchoolsServiceImpl implements SchoolsService {
         return (ArrayList<Schools>) this.schoolsRepository.findAll();
     }
 
-//    public ArrayList<Schools> findByName(String name) {
-//        return this.schoolsRepository.findByName(name);
-//    }
-
 }
