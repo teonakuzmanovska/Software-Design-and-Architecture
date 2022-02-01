@@ -162,13 +162,3 @@ body{
 .mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
     border-bottom-color: #91c949;
 }
-
-tr, th, td{
-    border: 1px solid black;
-}
-
-#tabela{
-    position: absolute;
-    width: 500px;
-    left: 361px;
-}

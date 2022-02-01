@@ -23,6 +23,8 @@
     <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
 </head>
 
+<!--Header-->
+
 <body>
 <section id="nav-bar">
     <nav class="navbar navbar-expand-lg">
@@ -57,34 +59,36 @@
 
 <section id="selectpart">
     <div class="container">
-        <div class="row align-items-center justify-content-between">
-            <div class="col-md-6">
-                <div class="form-outline">
-                </div>
-                <div class="selectors float-end">
+        <div class=" d-flex justify-content-center align-items-center">
+
 <!--Selecting school-->
-                    <select id="options" class="form-select py-3 mt-5 btn-success aria-label=Default select example">
+                    <select id="options" class="form-select w-25 py-2 my-3 btn-success">
                         <option selected="selected">Choose your school</option>
                         <option th:each="school : ${schools}" th:value="${school}">
                             <th:block th:text="${school.name}"></th:block>
                         </option>
                     </select>
 
+        </div>
+
 <!--Hidden form for passing lon and lat to controller-->
 
-                    <input type="button" onclick="displayLibraries()" value="Upon selection click me, then SUBMIT">
-                    <form method="post" action="/libraries">
-                        <div id="forma"></div>
-                        <input type="submit">
-                    </form>
-
-                </div>
-
-            </div>
+        <div class=" d-flex justify-content-center align-items-center">
+            <input type="button" onclick="displayLibraries()" value="Upon selection click me, then SUBMIT">
         </div>
+
+        <div class=" d-flex justify-content-center align-items-center my-3">
+            <form method="post" action="/libraries">
+                <div id="forma"></div>
+                <input type="submit">
+            </form>
+        </div>
+
     </div>
 
 </section>
+
+<!--Map-->
 
 <section>
     <div class="container">
@@ -102,6 +106,8 @@
 
     </script>
 </section>
+
+<!--JS for sending coordinates to hidden form-->
 
 <script src="js/lat_lon.js" th:inline="javascript">
 
