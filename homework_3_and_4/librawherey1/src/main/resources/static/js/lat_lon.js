@@ -8,9 +8,7 @@ function displayLibraries()
     var lat = parseFloat(selectedSchool.substring(latIndex+4, latIndex+14))
     var lon = parseFloat(selectedSchool.substring(lonIndex+4, lonIndex+14))
 
-    console.log(lat)
-    console.log(lon)
+    document.getElementById("forma").innerHTML = "<input type='hidden' name='lat' value="+lat+">" +
+        "<input type='hidden' name='lon' value="+lon+">"
 
-    document.getElementById("form").innerHTML += "<input type='hidden' name='lat' th:value="+lat+">" +
-        "<input type='hidden' name='lon' th:value="+lon+">"
 }

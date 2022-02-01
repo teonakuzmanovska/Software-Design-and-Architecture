@@ -22,7 +22,6 @@ public class LibrariesController {
 
     @PostMapping
     ModelAndView save(@RequestParam(value = "lat", required = false) Double lat, @RequestParam(value = "lon", required = false) Double lon) {
-
         ModelAndView mav = new ModelAndView("libraries");
 
         ArrayList<Libraries> libraries = librariesService.findAll();
@@ -32,4 +31,5 @@ public class LibrariesController {
 
         return mav;
     }
+
 }

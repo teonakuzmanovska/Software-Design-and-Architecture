@@ -163,6 +163,12 @@ body{
     border-bottom-color: #91c949;
 }
 
-table, th, tr, td{
-    border-style: solid;
+tr, th, td{
+    border: 1px solid black;
+}
+
+#tabela{
+    position: absolute;
+    width: 500px;
+    left: 361px;
 }

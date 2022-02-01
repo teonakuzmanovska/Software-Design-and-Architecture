@@ -1,7 +1,6 @@
 package com.example.librawherey1.service.impl;
 
 import com.example.librawherey1.model.Libraries;
-import com.example.librawherey1.model.Schools;
 import com.example.librawherey1.repository.LibrariesRepository;
 import com.example.librawherey1.service.LibrariesService;
 import org.springframework.stereotype.Service;

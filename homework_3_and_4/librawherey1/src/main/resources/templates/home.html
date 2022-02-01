@@ -21,7 +21,6 @@
 
     <!-- Turf.js plugin -->
     <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
-
 </head>
 
 <body>
@@ -73,10 +72,10 @@
 
 <!--Hidden form for passing lon and lat to controller-->
 
-                    <form th:method="post" th:action="libraries">
-                        <div id="form">
-                            <input type="submit" onclick="displayLibraries()">
-                        </div>
+                    <input type="button" onclick="displayLibraries()" value="Upon selection click me, then SUBMIT">
+                    <form method="post" action="/libraries">
+                        <div id="forma"></div>
+                        <input type="submit">
                     </form>
 
                 </div>
@@ -103,42 +102,8 @@
 
     </script>
 </section>
-<section id="footer" class="fixed-bottom">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 footer-box text-center">
-                <p><b>ABOUT US</b></p>
-                <p>This web application is meant to find the nearest libraries to a specific school.
-                    We remembered our need to know where we could get needed literature or to simply know a nearby quiet
-                    library where we could
-                    study more effectively, for that purpose, we decided to make it easier for the other students.</p>
-            </div>
-            <div class="col-md-4 footer-box text-center">
-                <p><b>CONTACT US</b></p>
-                <p><i class="fas fa-phone"></i> +398 78 000 000</p>
-                <p><i class="fas fa-envelope"></i> xyz@gamil.com</p>
-            </div>
-            <div class="col-md-4 footer-box text-center">
-                <h5 class="text-uppercase">Links</h5>
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" th:href="@{/home}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" th:href="@{/aboutus}">About-us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" th:href="@{/contact}">Contact us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" th:href="@{/help}">Help</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-<script src="js/lat_lon" th:inline="javascript">
+
+<script src="js/lat_lon.js" th:inline="javascript">
 
 </script>
 
