@@ -33,7 +33,7 @@
 
 ### Conceptual View
 
-![Conceptual Architecture.jpg](architectural_styles/Conceptual%20Architecture/Conceptual%20Architecture.jpg)
+![Conceptual Architecture.jpg](01%20UML%20diagrams/conceptual_diagram.jpg)
 
 
 ## Architectural Styles
