@@ -13,7 +13,6 @@ public class HelpController {
     @ResponseBody
     ModelAndView index()
     {
-        ModelAndView mav = new ModelAndView("help");
-        return mav;
+        return new ModelAndView("help");
     }
 }

@@ -12,7 +12,7 @@ import java.util.ArrayList;
 @RequestMapping({"/", "/home"})
 public class HomeController {
 
-    private SchoolsService schoolsService;
+    private final SchoolsService schoolsService;
 
     public HomeController(SchoolsService schoolsService) {
         this.schoolsService = schoolsService;

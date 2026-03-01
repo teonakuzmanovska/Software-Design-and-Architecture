@@ -15,8 +15,7 @@ public class AboutUsController {
     @ResponseBody
     ModelAndView index()
     {
-        ModelAndView mav = new ModelAndView("aboutus");
-        return mav;
+        return new ModelAndView("aboutus");
     }
 
 }

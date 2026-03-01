@@ -14,7 +14,7 @@ import java.util.ArrayList;
 @RequestMapping("/libraries")
 public class LibrariesController {
 
-    private LibrariesService librariesService;
+    private final LibrariesService librariesService;
 
     public LibrariesController(LibrariesService librariesService) {
         this.librariesService = librariesService;

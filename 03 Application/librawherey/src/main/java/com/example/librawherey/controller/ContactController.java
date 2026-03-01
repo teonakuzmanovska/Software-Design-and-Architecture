@@ -13,7 +13,6 @@ public class ContactController {
     @ResponseBody
     ModelAndView index()
     {
-        ModelAndView mav = new ModelAndView("contact");
-        return mav;
+        return new ModelAndView("contact");
     }
 }
