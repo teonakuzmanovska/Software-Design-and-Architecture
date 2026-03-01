@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.ArrayList;
 
 @Controller
-@RequestMapping("/home")
+@RequestMapping({"/", "/home"})
 public class HomeController {
 
     private SchoolsService schoolsService;
