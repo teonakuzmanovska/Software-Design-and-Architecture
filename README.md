@@ -3,9 +3,9 @@
 #### *- Software Design, Architecture and Implementation of a Spring Boot Application*.
 
 
-Librawherey is a locating service that calculates nearby libraries based on a selected schools in Skopje.
+Librawherey is a locating service that calculates nearby libraries based on a selected school in Skopje.
 
-This project was developed as a collaborative homework assignment for the university subject Software Design and Analysis, while I was learning web development from scratch.
+This project was developed as a collaborative homework assignment for the university subject Software Design and Analysis, while learning web development from scratch.
 
 ## Overview
 
